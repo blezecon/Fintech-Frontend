@@ -17,9 +17,13 @@ import Terms from '../pages/Terms';
 import Privacy from '../pages/Privacy';
 import Support from '../pages/Support';
 import ResetPassword from '../pages/ResetPassword';
+import Footer from '../components/layout/Footer';
+import Navbar from '../components/layout/Navbar';
 
 function App() {
   return (
+    <>
+    <Navbar />
     <Routes>
       <Route path="/" element={<Landing />} />
       <Route path="/login" element={<Login />} />
@@ -41,6 +45,8 @@ function App() {
       <Route path="/home" element={<Navigate to="/" replace />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
+    <Footer />
+    </>
   );
 }
 
